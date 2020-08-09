@@ -1,0 +1,27 @@
+{
+  "name": "translentor",
+  "version": "1.0.0",
+  "description": "A redefined way of speaking with AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binismail/Translentor.git"
+  },
+  "keywords": [
+    "AI",
+    "design"
+  ],
+  "author": "binismail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binismail/Translentor/issues"
+  },
+  "homepage": "https://github.com/binismail/Translentor#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
