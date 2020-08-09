@@ -1,8 +1,19 @@
 const express = require('express')
+const cors = require('cors');
+const bodyParser = require('body-parser');
 const Pusher = require('pusher')
+const {wit} = require('node')
 const app = express()
 
+let witToke =  742957413135295
+const client = new wit({
+    witToken = process.env.witToke
+})
+
 const PORT = process.env.PORT || 3000
+
+app.use(bodyParser.json)
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.listen(PORT, ()=>{
     const puhser = new Pusher({
@@ -26,9 +37,9 @@ app.post('/chat', (req, res) => {
     greetings: ["Hey, how's it going?", "What's your name?"],
 
     motivation: [
-      'Do I lose when the police officer says papers and I say scissors?',
-      'I have clean conscience. I haven’t used it once till now.',
-      'Did you hear about the crook who stole a calendar? He got twelve months.',
+      'Do today what others won’t so tomorrow you can do what others can’t. – Jerry Rice',
+      'Never give up hope. All things are working for your good. One day, you’ll look back on everything you’ve been through and thank God for it. – Germany Kent',
+      'Believe in yourself and all that you are, know that there is something inside you that is greater than any obstacle. – Christian D Larson',
     ],
   };
 
